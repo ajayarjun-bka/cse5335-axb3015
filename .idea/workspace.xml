@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e78dfc-703e-4efe-9e66-dac3bfdefddf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/acorn/bin/build-acorn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/acorn/src/loose/acorn_loose.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pug-lexer/node_modules/character-parser/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pug-lexer/node_modules/character-parser/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pug-lexer/node_modules/character-parser/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pug-lexer/node_modules/character-parser/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pug-lexer/node_modules/character-parser/package.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/bin/acorn" afterPath="$PROJECT_DIR$/node_modules/acorn/bin/acorn" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/bin/generate-identifier-regex.js" afterPath="$PROJECT_DIR$/node_modules/acorn/bin/generate-identifier-regex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn_loose.js" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/acorn_loose.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/dist/walk.js" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/walk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/bin/acorn.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/bin/acorn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/expression.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/expression.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/identifier.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/identifier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/index.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/location.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/location.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/loose/expression.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/loose/expression.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/loose/index.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/loose/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/loose/state.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/loose/state.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/loose/statement.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/loose/statement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/loose/tokenize.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/loose/tokenize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/lval.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/lval.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/options.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/parseutil.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/parseutil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/state.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/state.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/statement.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/statement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/tokencontext.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/tokencontext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/tokenize.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/tokenize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/tokentype.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/tokentype.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/walk/index.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/walk/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/acorn/src/whitespace.js" afterPath="$PROJECT_DIR$/node_modules/acorn/src/whitespace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/promise/lib/core.js" afterPath="$PROJECT_DIR$/node_modules/promise/lib/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/promise/lib/done.js" afterPath="$PROJECT_DIR$/node_modules/promise/lib/done.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/promise/lib/es6-extensions.js" afterPath="$PROJECT_DIR$/node_modules/promise/lib/es6-extensions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/promise/lib/node-extensions.js" afterPath="$PROJECT_DIR$/node_modules/promise/lib/node-extensions.js" />
     </list>
     <ignored path="project1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -274,7 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475378294342</updated>
       <workItem from="1475378295625" duration="270000" />
-      <workItem from="1475444809305" duration="4261000" />
+      <workItem from="1475444809305" duration="4320000" />
     </task>
     <task id="LOCAL-00001" summary="express app">
       <created>1475445635512</created>
@@ -290,11 +254,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475449104534</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="express app">
+      <created>1475449231083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1475449231083</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4531000" />
+    <option name="totallyTimeSpent" value="4590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1934" height="1056" extended-state="0" />
