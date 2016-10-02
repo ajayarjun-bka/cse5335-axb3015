@@ -1,20 +1,23 @@
 var express = require('express');
+var pug = require('pug');
+var path = require('path');
 
+var port = process.env.PORT || 3000;
 var app = express();
-var port = process.env.PORT || 5000;
+
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+//app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.get('/', function (req, res) {
     res.send("<h1>AJAY</h1>");
 });
 
+app.get('/a', function (req, res) {
+    res.render('hello',{'name':'ajay'});
+});
+
+
 app.listen(port);
-
-
-/*
- var http = require('http')
-
- http.createServer(function (req, res) {
- res.writeHead(200, {'content-type': 'text/html'});
- res.end("<h1>Hello World</h1>");
- }).listen(process.env.PORT || 5000);
- console.log("Server Started");*/
