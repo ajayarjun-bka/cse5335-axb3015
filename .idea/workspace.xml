@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="62e78dfc-703e-4efe-9e66-dac3bfdefddf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/apo.pug" afterPath="$PROJECT_DIR$/views/apo.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/hello.pug" afterPath="$PROJECT_DIR$/views/hello.pug" />
     </list>
     <ignored path="project1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -314,7 +311,7 @@
       <workItem from="1475378295625" duration="270000" />
       <workItem from="1475444809305" duration="15585000" />
       <workItem from="1475472415130" duration="1070000" />
-      <workItem from="1475510269724" duration="5871000" />
+      <workItem from="1475510269724" duration="5883000" />
     </task>
     <task id="LOCAL-00001" summary="express app">
       <created>1475445635512</created>
@@ -344,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475472657568</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="api check">
+      <created>1475518161641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1475518161641</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22796000" />
+    <option name="totallyTimeSpent" value="22808000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -397,7 +401,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="express app" />
     <MESSAGE value="external js" />
-    <option name="LAST_COMMIT_MESSAGE" value="external js" />
+    <MESSAGE value="api check" />
+    <option name="LAST_COMMIT_MESSAGE" value="api check" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
