@@ -1,6 +1,3 @@
-//
-   Created by Ajay Arjun on 10/3/2016.
-
 doctype html
 html(lang='en')
     head
@@ -10,12 +7,15 @@ html(lang='en')
     body
         div(ng-app='myApp', ng-controller='myCtrl')
             p Today's welcome message is:
+            button(ng-click='click()') Calculate
             h1 {{myWelcome}}
         script.
             var app = angular.module('myApp', []);
             app.controller('myCtrl', function ($scope, $http) {
-                $http.get("https://cse5335-axb3015.herokuapp.com/json")
-                        .success(function (response) {
-                            $scope.myWelcome = response;
-                        });
+                $scope.click = function () {
+                    $http.get("https://cse5335-axb3015.herokuapp.com/json")
+                            .success(function (response) {
+                                $scope.myWelcome = response;
+                            });
+                }
             });
