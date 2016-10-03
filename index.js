@@ -32,6 +32,9 @@ app.get('/json', function (req, res) {
     });
 });
 
+app.get('/api',function (req, res) {
+    res.render('api');
+});
 
 app.listen(port);
 

@@ -1,0 +1,21 @@
+//
+   Created by Ajay Arjun on 10/3/2016.
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Angular
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js')
+    body
+        div(ng-app='myApp', ng-controller='myCtrl')
+            p Today's welcome message is:
+            h1 {{myWelcome}}
+        script.
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope, $http) {
+                $http.get("https://cse5335-axb3015.herokuapp.com/json")
+                        .success(function (response) {
+                            $scope.myWelcome = response;
+                        });
+            });
