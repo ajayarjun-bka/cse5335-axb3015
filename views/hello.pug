@@ -5,5 +5,18 @@ html
     head
         title my jade template
     body
-        h1 Hello #{name} how are you what the crap
+        h1 Hello #{name} Click the button below to load the json data from server
+        div(ng-app='myApp', ng-controller='myCtrl')
+            button(ng-click='click()') FETCH JSON
+            p {{json}}
+        script.
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope, $http) {
+                $scope.click = function () {
+                    $http.get("https://cse5335-axb3015.herokuapp.com/json")
+                            .success(function (response) {
+                                $scope.json = response;
+                            });
+                }
+            });
 
