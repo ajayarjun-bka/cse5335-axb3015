@@ -4,18 +4,20 @@ doctype html
 html
     head
         title my jade template
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js')
     body
         h1 Hello #{name} Click the button below to load the json data from server
         div(ng-app='myApp', ng-controller='myCtrl')
             button(ng-click='click()') FETCH JSON
-            p {{json}}
+            p {{mydata}}
+            p(ng-value='mydata')
         script.
             var app = angular.module('myApp', []);
             app.controller('myCtrl', function ($scope, $http) {
                 $scope.click = function () {
                     $http.get("https://cse5335-axb3015.herokuapp.com/json")
                             .success(function (response) {
-                                $scope.json = response;
+                                $scope.mydata = response;
                             });
                 }
             });
