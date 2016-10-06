@@ -11,15 +11,6 @@ html
             button(ng-click='click()') FETCH JSON
             h3(ng-repeat= "x in mydata") {{x}}
             p {{mydata}}
-        script.
-            var app = angular.module('myApp', []);
-            app.controller('myCtrl', function ($scope, $http) {
-                $scope.click = function () {
-                    $scope.sample = ["a","b","c"];
-                    $http.get("https://cse5335-axb3015.herokuapp.com/json")
-                            .success(function (response) {
-                                $scope.mydata = response;
-                            });
-                }
-            });
+            script(src="/public/js/app.js")
+
 
