@@ -2,12 +2,10 @@ var express = require('express');
 var pug = require('pug');
 var path = require('path');
 var fs = require('fs');
-var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 5000;
 var app = express();
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded();
+
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -26,7 +24,7 @@ app.get('/json', function (req, res) {
     var obj;
     fs.readFile('sample.json', 'utf8', function (err, data) {
         if (err) throw err;
-        obj = JSON.parse(data)
+        obj = JSON.parse(data);
         //res.render('apo',{'json':JSON.stringify(obj )})
         res.json(obj);
     });
