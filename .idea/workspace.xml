@@ -39,8 +39,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state relative-caret-position="175">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
               <folding>
                 <element signature="n#!!doc;n#help#0" expanded="false" />
               </folding>
@@ -351,7 +351,7 @@
       <workItem from="1475534341161" duration="1548000" />
       <workItem from="1475609394418" duration="5027000" />
       <workItem from="1475772390949" duration="2913000" />
-      <workItem from="1475805395160" duration="12421000" />
+      <workItem from="1475805395160" duration="12539000" />
     </task>
     <task id="LOCAL-00001" summary="express app">
       <created>1475445635512</created>
@@ -640,11 +640,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475827078399</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="wrapping my head around angular">
+      <created>1475827380977</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1475827380977</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46294000" />
+    <option name="totallyTimeSpent" value="46412000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1093,8 +1100,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="175">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
             <element signature="n#!!doc;n#help#0" expanded="false" />
           </folding>
