@@ -9,8 +9,9 @@ html
         h5 Hello #{name} Click the button below to load the json data from server
         div(ng-app='myApp', ng-controller='myCtrl')
             button(ng-click='click()') FETCH JSON
-            h3(ng-repeat= "x in mydata") {{x}}
-            p {{mydata}}
-            script(src="/public/js/app.js")
+            table
+                th Data
+                tr(ng-repeat="person in mydata") {{person}}
+        script(src="/public/js/app.js")
 
 
