@@ -11,29 +11,25 @@ var urlencodedParser = bodyParser.urlencoded();
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-app.use('/public',express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/', function (req, res, next) {
-    console.log('Request Type:', req.method,' url: ',req.url);
+    console.log('Request Type:', req.method, ' url: ', req.url);
     next();
 });
 
 app.get('/', function (req, res) {
-    res.render('hello',{'name':'ajay'});
+    res.render('hello', {'name': 'ajay'});
 });
 
 app.get('/json', function (req, res) {
     var obj;
     fs.readFile('sample.json', 'utf8', function (err, data) {
         if (err) throw err;
-        obj =JSON.parse(data)
+        obj = JSON.parse(data)
         //res.render('apo',{'json':JSON.stringify(obj )})
         res.json(obj);
     });
-});
-
-app.get('/api',function (req, res) {
-    res.render('api');
 });
 
 app.listen(port);

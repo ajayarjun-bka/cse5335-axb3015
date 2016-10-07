@@ -4,7 +4,6 @@
 function help() {
     alert("HELLO FROM THE OTHER SIDE");
 }
-
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $http) {
     $scope.click = function () {

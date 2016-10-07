@@ -1,21 +1,16 @@
+//
+   Created by Ajay Arjun on 10/2/2016.
 doctype html
-html(lang='en')
+html
     head
-        meta(charset='UTF-8')
-        title Angular
-        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js')
+        title AJAY ARJUN
+        script(src="public/js/app.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
     body
-        div(ng-app='myApp', ng-controller='myCtrl')
-            p Today's welcome message is:
-            button(ng-click='click()') Calculate
-            h1 {{myWelcome}}
-        script.
-            var app = angular.module('myApp', []);
-            app.controller('myCtrl', function ($scope, $http) {
-                $scope.click = function () {
-                    $http.get("https://cse5335-axb3015.herokuapp.com/json")
-                            .success(function (response) {
-                                $scope.myWelcome = response;
-                            });
-                }
-            });
+        h1 THE MAG #{json}
+        input(type = "button",value="Click ME",onclick="help()")
+        div(ng-app="")
+            input(type="text",ng-model="name")
+            h1 I am {{name}}
+
+
