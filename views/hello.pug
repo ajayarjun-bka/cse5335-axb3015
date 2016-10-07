@@ -8,7 +8,7 @@ html
     body
         h5 Hello #{name} Click the button below to load the json data from server
         div(ng-app='myApp', ng-controller='myCtrl')
-            button(ng-click='click()') FETCH JSON
+            button(ng-click='click()',ng-hide="mydata.length") FETCH JSON
             table(ng-show="mydata.length",border="1")
                 th firstName
                 th lastName
