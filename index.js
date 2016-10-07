@@ -25,7 +25,6 @@ app.get('/json', function (req, res) {
     fs.readFile('sample.json', 'utf8', function (err, data) {
         if (err) throw err;
         obj = JSON.parse(data);
-        //res.render('apo',{'json':JSON.stringify(obj )})
         res.json(obj);
     });
 });
