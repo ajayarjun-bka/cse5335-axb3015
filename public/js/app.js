@@ -9,9 +9,8 @@ app.controller('myCtrl', function ($scope, $http) {
             .then(function (response) {
                 $scope.mydata =response;
             },function(response){
-                var temp=document.getElementById('one');
+                alert(response.status)
                 console.log(response.status);
-                temp.innerHTML="<h3>Error from server</h3>+response";
             });
 
         }
