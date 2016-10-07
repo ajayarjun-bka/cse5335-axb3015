@@ -9,7 +9,7 @@ app.controller('myCtrl', function ($scope, $http) {
     $scope.click = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/json")
             .success(function (response) {
-                $scope.mydata = response;
+                $scope.mydata =response;
             });
         }
 });
