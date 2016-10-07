@@ -7,13 +7,12 @@ function help() {
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $http) {
     $scope.click = function () {
-        $http.get("https://cse5335-axb3015.herokuapp.com/jsn")
+        $http.get("https://cse5335-axb3015.herokuapp.com/json")
             .then(function (response) {
                 $scope.mydata =response;
             },function(response){
                 var temp=document.getElementById('tab');
-                console.log(response);
-                alert(response);
+                console.log(response.status);
                 temp.innerHTML="<h3>Error from server</h3>+response";
             });
 
