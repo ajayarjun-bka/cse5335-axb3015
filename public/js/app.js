@@ -11,8 +11,10 @@ app.controller('myCtrl', function ($scope, $http) {
             .then(function (response) {
                 $scope.mydata =response;
             },function(response){
-                var temp=document.getElementById('tab')
-                temp.innerHTML="<h3>Error from server</h3>+response"
+                var temp=document.getElementById('tab');
+                console.log(response);
+                alert(response);
+                temp.innerHTML="<h3>Error from server</h3>+response";
             });
 
         }
