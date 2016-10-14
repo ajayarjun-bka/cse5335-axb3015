@@ -9,10 +9,8 @@ app.controller('myCtrl', function ($scope, $http) {
     $scope.click = function () {
         $scope.mydata=[];
         $http.get("https://cse5335-axb3015.herokuapp.com/json")
-            .then((function (response) {
+            .then(function (response) {
                 $scope.mydata = response;
-            }),(function (response) {
-                console.log("Error" + response.status);
-            }))
+            });
     }
 });
