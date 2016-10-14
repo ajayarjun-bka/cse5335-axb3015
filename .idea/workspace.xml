@@ -61,8 +61,8 @@
       <file leaf-file-name="hello.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/hello.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="475">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -367,7 +367,7 @@
       <workItem from="1475772390949" duration="2913000" />
       <workItem from="1475805395160" duration="15096000" />
       <workItem from="1475866948410" duration="23000" />
-      <workItem from="1476420158832" duration="2118000" />
+      <workItem from="1476420158832" duration="2695000" />
     </task>
     <task id="LOCAL-00001" summary="express app">
       <created>1475445635512</created>
@@ -684,11 +684,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476472301543</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="wrapping my head around angular">
+      <created>1476473103944</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1476473103944</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51110000" />
+    <option name="totallyTimeSpent" value="51687000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1140,8 +1147,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/hello.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="475">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
