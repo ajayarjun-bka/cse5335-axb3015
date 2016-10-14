@@ -8,16 +8,16 @@ html
     body
         h5 Hello #{name} Click the button below to load the json data from server
         div(ng-app='myApp', ng-controller='myCtrl')
-            button(ng-click='click()',ng-hide="mydata") FETCH JSON
-            table(ng-show="mydata",border="1")
+            button(ng-click='click()',ng-hide="myCtrl.mydata") FETCH JSON
+            table(ng-show="myCtrl.mydata",border="1")
                 th firstName
                 th lastName
                 th age
-                tr(ng-repeat="person in mydata")
+                tr(ng-repeat="person in myCtrl.mydata")
                     td {{person.firstName}}
                     td {{person.lastName}}
                     td {{person.age}}
-            h1(ng-show="!mydata") Click Button To Load Data
+            h1(ng-show="!myCtrl.mydata") Click Button To Load Data
             p {{mydata}}
         script(src="/public/js/app.js")
 
