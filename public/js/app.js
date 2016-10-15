@@ -28,7 +28,7 @@ app.controller('graph',function ($scope,$http) {
                 $scope.rows = response;
 
             });
-        drawChart(response)
+        drawChart(rows)
     }
 });
 
@@ -42,7 +42,6 @@ function drawChart(response) {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
-    console.log(rows);
     for (r in response) {
         data.addRow([response[r].label, response[r].count]);
     }
