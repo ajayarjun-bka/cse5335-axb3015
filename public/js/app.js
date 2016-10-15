@@ -20,7 +20,7 @@ app.controller('myCtrl', function ($scope, $http) {
 });
 
 
-google.charts.load('current');
+google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 response=null;
 $.get("https://cse5335-axb3015.herokuapp.com/graphdata", function (data, status) {
