@@ -2,6 +2,10 @@
  * Created by Ajay Arjun on 10/2/2016.
  */
 var app = angular.module('myApp', []);
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+
 
 app.controller('myCtrl', function ($scope, $http) {
     $scope.click = function () {
@@ -16,17 +20,25 @@ app.controller('myCtrl', function ($scope, $http) {
 });
 
 app.controller('graph',function ($scope,$http) {
+
+
     $scope.click = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .then(function (response) {
                 $scope.rows = response;
-                drawChart(response);
+
             });
+        drawChart(response)
     }
 });
 
 
+
+
+
 function drawChart(response) {
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
@@ -39,6 +51,6 @@ function drawChart(response) {
         'width': 500,
         'height': 300
     };
-    var chart = new google.visualization.ColumnChart(document.getElementById('ajay'));
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }
