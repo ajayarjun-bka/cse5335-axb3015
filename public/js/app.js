@@ -19,30 +19,20 @@ app.controller('myCtrl', function ($scope, $http) {
     }
 });
 
-app.controller('graph',function ($scope,$http) {
-    $scope.rows;
-    $scope.click = function () {
-        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
-            .then(function (response) {
-                $scope.rows = response;
-            });
-        drawChart(rows)
-    }
+
+google.charts.load('current');
+google.charts.setOnLoadCallback(drawChart);
+response=null;
+$.get("https://cse5335-axb3015.herokuapp.com/graphdata", function (data, status) {
+    alert("Data: " + data + "\nStatus: " + status);
+    response = data;
+
 });
-
-
-
-
-
 function drawChart() {
-    $.get("https://cse5335-axb3015.herokuapp.com/graphdata", function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
-        response = data;
-
-    });
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
+    console.log(response)
     for (r in response) {
         data.addRow([response[r].label, response[r].count]);
     }

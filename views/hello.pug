@@ -7,31 +7,6 @@ html(ng-app='myApp')
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
         script(src="https://www.gstatic.com/charts/loader.js")
-        script(type='text/javascript').
-            google.charts.load('current');
-            google.charts.setOnLoadCallback(drawChart);
-            response=null;
-            $.get("https://cse5335-axb3015.herokuapp.com/graphdata", function (data, status) {
-                alert("Data: " + data + "\nStatus: " + status);
-                response = data;
-
-            });
-            function drawChart() {
-                var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Topping');
-                data.addColumn('number', 'Slices');
-                console.log(response)
-                for (r in response) {
-                    data.addRow([response[r].label, response[r].count]);
-                }
-                var options = {
-                    'title': 'How Much Pizza I Ate Last Night',
-                    'width': 500,
-                    'height': 300
-                };
-                var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
-            }
 
     body
         h5 Hello #{name} Click the button below to load the json data from server
