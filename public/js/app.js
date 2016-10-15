@@ -34,10 +34,7 @@ app.controller('graph',function ($scope,$http) {
 
 
 
-(function drawChart(response) {
-    google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(drawChart());
-    response=null;
+function drawChart() {
     $.get("https://cse5335-axb3015.herokuapp.com/graphdata", function(data, status){
         alert("Data: " + data + "\nStatus: " + status);
         response = data;
@@ -56,4 +53,4 @@ app.controller('graph',function ($scope,$http) {
     };
     var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-})();
+}

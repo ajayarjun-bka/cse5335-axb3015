@@ -7,17 +7,27 @@ html(ng-app='myApp')
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
         script(src="https://www.gstatic.com/charts/loader.js")
         script(type='text/javascript').
-            google.charts.load('current');   // Don't need to specify chart libraries!
+            google.charts.load('current');
             google.charts.setOnLoadCallback(drawVisualization);
-            function drawVisualization() {
-                var wrapper = new google.visualization.ChartWrapper({
-                    chartType: 'ColumnChart',
-                    dataTable: [['', 'Germany', 'USA', 'Brazil', 'Canada', 'France', 'RU'],
-                        ['', 700, 300, 400, 500, 600, 800]],
-                    options: {'title': 'Countries'},
-                    containerId: 'vis_div'
+            function drawChart() {
+                $.get("https://cse5335-axb3015.herokuapp.com/graphdata", function (data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                    response = data;
+
                 });
-                wrapper.draw();
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Topping');
+                data.addColumn('number', 'Slices');
+                for (r in response) {
+                    data.addRow([response[r].label, response[r].count]);
+                }
+                var options = {
+                    'title': 'How Much Pizza I Ate Last Night',
+                    'width': 500,
+                    'height': 300
+                };
+                var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
             }
 
     body
