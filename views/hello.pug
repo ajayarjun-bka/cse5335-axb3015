@@ -21,7 +21,7 @@ html(ng-app='myApp')
                     td {{person.lastName}}
                     td {{person.age}}
             h1(ng-show="!mydata.length") Click Button To Load Data
-        button(onclick="loadgraph") click me for graph
+        button(onclick="loadgraph()") click me for graph
         div(id="chart_div")
         script(src="/public/js/app.js")
 
