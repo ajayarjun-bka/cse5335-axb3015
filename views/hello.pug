@@ -6,6 +6,19 @@ html(ng-app='myApp')
         title my jade template
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
         script(src="https://www.gstatic.com/charts/loader.js")
+        script(type='text/javascript').
+            google.charts.load('current');   // Don't need to specify chart libraries!
+            google.charts.setOnLoadCallback(drawVisualization);
+            function drawVisualization() {
+                var wrapper = new google.visualization.ChartWrapper({
+                    chartType: 'ColumnChart',
+                    dataTable: [['', 'Germany', 'USA', 'Brazil', 'Canada', 'France', 'RU'],
+                        ['', 700, 300, 400, 500, 600, 800]],
+                    options: {'title': 'Countries'},
+                    containerId: 'vis_div'
+                });
+                wrapper.draw();
+            }
 
     body
         h5 Hello #{name} Click the button below to load the json data from server
@@ -20,8 +33,7 @@ html(ng-app='myApp')
                     td {{person.lastName}}
                     td {{person.age}}
             h1(ng-show="!mydata.length") Click Button To Load Data
-        button(id="button",value="click")
-        div(id="chart_div")
+        div(id="vis_div")
         script(src="/public/js/app.js")
 
 
