@@ -2,8 +2,8 @@
  * Created by Ajay Arjun on 10/2/2016.
  */
 var app = angular.module('myApp', []);
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+//google.charts.load('current', {'packages':['corechart']});
+//google.charts.setOnLoadCallback(drawChart);
 
 
 
@@ -34,9 +34,15 @@ app.controller('graph',function ($scope,$http) {
 
 
 
-function drawChart(response) {
+(function drawChart(response) {
     google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawChart());
+    response=null;
+    $.get("https://cse5335-axb3015.herokuapp.com/graphdata", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+        response = data;
+
+    });
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
@@ -50,4 +56,4 @@ function drawChart(response) {
     };
     var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-}
+})();
