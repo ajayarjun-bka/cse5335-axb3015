@@ -19,8 +19,9 @@ html(ng-app='myApp')
                     td {{person.age}}
             h1(ng-show="!mydata.length") Click Button To Load Data
         div(ng-controller="graph")
+            button(ng-click='click()',ng-hide="mydata.length") FETCH JSON
             div(ng-show="rows.length")
-                Hello
+                h1 Hello
         script(src="/public/js/app.js")
 
 

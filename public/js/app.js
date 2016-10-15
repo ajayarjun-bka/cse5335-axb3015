@@ -16,8 +16,10 @@ app.controller('myCtrl', function ($scope, $http) {
 });
 
 app.controller('graph',function ($scope,$http) {
-    $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
-        .then(function (response) {
-            $scope.rows=response;
-        })
-})
+    $scope.click = function () {
+        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
+            .then(function (response) {
+                $scope.rows = response;
+            });
+    }
+});
