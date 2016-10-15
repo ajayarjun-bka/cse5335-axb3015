@@ -1,13 +1,13 @@
 //
    Created by Ajay Arjun on 10/2/2016.
 doctype html
-html
+html(ng-app='myApp')
     head
         title my jade template
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
     body
         h5 Hello #{name} Click the button below to load the json data from server
-        div(ng-app='myApp', ng-controller='myCtrl')
+        div( ng-controller='myCtrl')
             button(ng-click='click()',ng-hide="mydata.length") FETCH JSON
             table(ng-show="mydata.length",border="1")
                 th firstName
@@ -18,7 +18,9 @@ html
                     td {{person.lastName}}
                     td {{person.age}}
             h1(ng-show="!mydata.length") Click Button To Load Data
-        #graph
+        div(ng-controller="graph")
+            div(ng-show="rows.length")
+                Hello
         script(src="/public/js/app.js")
 
 
