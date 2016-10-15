@@ -31,7 +31,8 @@ app.get('/json', function (req, res) {
 
 app.get('/graphdata',function(req,res)
 {
-    var data = [{"label":"toyota","count":45},{"label":"HONDA","count":60},{"label":"NISSAN","count":30},{"label":"GM","count":50}];
+    //var data = '{"rows":[{"label":"toyota","count":45},{"label":"HONDA","count":60},{"label":"NISSAN","count":30},{"label":"GM","count":50}]}';
+    var data = '[{"label":"toyota","count":45},{"label":"HONDA","count":60},{"label":"NISSAN","count":30},{"label":"GM","count":50}]';
     var rows=JSON.parse(data);
     res.json(rows);
 });
