@@ -5,6 +5,7 @@ html(ng-app='myApp')
     head
         title my jade template
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
+        script(src="https://www.gstatic.com/charts/loader.js")
     body
         h5 Hello #{name} Click the button below to load the json data from server
         div( ng-controller='myCtrl')
@@ -20,7 +21,7 @@ html(ng-app='myApp')
             h1(ng-show="!mydata.length") Click Button To Load Data
         div(ng-controller="graph")
             button(ng-click='click()',ng-hide="rows.length") FETCH JSON
-            div(ng-show="rows.length")
+            div(id="ajay")
                 h1 Hello
         script(src="/public/js/app.js")
 
