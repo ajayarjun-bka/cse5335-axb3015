@@ -19,8 +19,39 @@ app.controller('myCtrl', function ($scope, $http) {
     }
 });
 
+
+app.controller('graph',function ($scope,$http) {
+    $scope.draw=function() {
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        response = null;
+        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
+            .success(function (response) {
+                $scope.resp = response;
+            });
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            console.log(resp);
+            for (r in resp) {
+                data.addRow([resp[r].label, resp[r].count]);
+            }
+            var options = {
+                'title': 'How Much Pizza I Ate Last Night',
+                'width': 500,
+                'height': 300
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('div2'));
+            chart.draw(data, options);
+        }
+    }
+});
+
+
+/*
 function loadgraph() {
-    alert('called load')
+    alert('called load');
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     response = null;
@@ -45,4 +76,4 @@ function loadgraph() {
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
     }
-}
+}*/
