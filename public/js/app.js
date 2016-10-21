@@ -21,12 +21,13 @@ app.controller('myCtrl', function ($scope, $http) {
 
 app.controller('graph', function ($scope, $http) {
     $scope.drawer = function () {
-        google.charts.load('current', {'packages': ['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
+                console.log($scope.resp);
             });
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart($scope.resp));
         function drawChart(resp) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Topping');
