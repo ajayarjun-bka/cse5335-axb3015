@@ -41,11 +41,43 @@ app.controller('graph', function ($scope, $http) {
                     var chart = new google.visualization.ColumnChart(document.getElementById('div2'));
                     chart.draw(data, options);
                 }
+
                 google.charts.setOnLoadCallback(drawChart($scope.resp));
             });
     }
 });
 
-app.controller('maps',function ($scope,$http) {
-    
-})
+app.controller('maps', function ($scope, $http) {
+    $scope.mapper = function () {
+        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
+            .success(function (response) {
+                $scope.resp = response;
+            })
+        function initMap() {
+            var home = {lat: 32.733487, lng: -97.120123};
+            var kfc = {lat: 32.735095, lng: -97.114823};
+            var mcd = {lat: 32.735966, long: -97.113788};
+            var map = new google.maps.Map(document.getElementById('div3'), {
+                zoom: 15,
+                center: home
+            });
+            var marker = new google.maps.Marker({
+                position: home,
+                map: map
+            });
+            var marker1 = new google.maps.Marker({
+                position: kfc,
+                map: map
+            });
+            var marker2 = new google.maps.Marker({
+                position: mcd,
+                map: map
+            });
+
+        }
+
+        initMap();
+
+    }
+
+});

@@ -40,7 +40,6 @@ app.get('/graphdata',function(req,res)
 app.get('/mapdata',function(req,res)
 {
     var data = [{lat:32.733487, lng: -97.120123},{lat:32.735095, lng:-97.114823},{lat:32.735966, long:-97.113788}];
-    //var rows=JSON.parse(data);
     res.json(data);
 });
 

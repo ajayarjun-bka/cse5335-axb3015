@@ -7,6 +7,8 @@ html(ng-app='myApp')
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
         script(src="https://www.gstatic.com/charts/loader.js")
+        script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCix6eTqyWMd0mNZwoHcjfGpQcCiLiw9js&callback=initMap')
+
 
     body
         h5 Hello #{name} Click the button below to load the json data from server
@@ -23,9 +25,9 @@ html(ng-app='myApp')
             h1(ng-show="!mydata.length") Click Button To Load Data
         br
         div(ng-controller='graph',id="div2")
-            button(ng-click='drawer()') clcik me
-        button(onclick="loadgraph()") click me for graph
-        div(id="chart_div")
+            button(ng-click='drawer()') clcik me for graph
+        div(ng-controller='maps()',id="div3")
+            button(ng-click='mapper()') clcik me for map
         script(src="/public/js/app.js")
 
 
