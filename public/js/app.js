@@ -25,25 +25,25 @@ app.controller('graph', function ($scope, $http) {
             .success(function (response) {
                 $scope.resp = response;
                 console.log($scope.resp);
+                google.charts.load('current', {'packages': ['corechart']});
+                google.charts.setOnLoadCallback(drawChart($scope.resp));
+                function drawChart(resp) {
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Slices');
+                    console.log(resp);
+                    for (r in resp) {
+                        data.addRow([resp[r].label, resp[r].count]);
+                    }
+                    var options = {
+                        'title': 'How Much Pizza I Ate Last Night',
+                        'width': 500,
+                        'height': 300
+                    };
+                    var chart = new google.visualization.ColumnChart(document.getElementById('div2'));
+                    chart.draw(data, options);
+                }
             });
-        google.charts.load('current', {'packages': ['corechart']});
-        google.charts.setOnLoadCallback(drawChart($scope.resp));
-        function drawChart(resp) {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            console.log(resp);
-            for (r in resp) {
-                data.addRow([resp[r].label, resp[r].count]);
-            }
-            var options = {
-                'title': 'How Much Pizza I Ate Last Night',
-                'width': 500,
-                'height': 300
-            };
-            var chart = new google.visualization.ColumnChart(document.getElementById('div2'));
-            chart.draw(data, options);
-        }
     }
 });
 
