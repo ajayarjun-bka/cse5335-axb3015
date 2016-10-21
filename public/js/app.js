@@ -5,7 +5,7 @@ var app = angular.module('myApp', []);
 //google.charts.load('current', {'packages':['corechart']});
 //google.charts.setOnLoadCallback(drawChart);
 
-
+google.charts.load('current', {'packages': ['corechart']});
 app.controller('myCtrl', function ($scope, $http) {
     $scope.click = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/json")
@@ -25,8 +25,6 @@ app.controller('graph', function ($scope, $http) {
             .success(function (response) {
                 $scope.resp = response;
                 console.log($scope.resp);
-                setTimeout(function(){google.charts.load('current', {'packages': ['corechart']});
-                },1000);
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
