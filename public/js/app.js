@@ -25,8 +25,8 @@ app.controller('graph', function ($scope, $http) {
             .success(function (response) {
                 $scope.resp = response;
                 console.log($scope.resp);
-                google.charts.load('current', {'packages': ['corechart']});
-
+                setTimeout(function(){google.charts.load('current', {'packages': ['corechart']});
+                },1000)
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
