@@ -52,7 +52,7 @@ app.controller('maps', function ($scope, $http) {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
-            })
+            });
         function initMap() {
             var home = {lat: 32.733487, lng: -97.120123};
             var kfc = {lat: 32.735095, lng: -97.114823};
