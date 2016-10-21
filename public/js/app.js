@@ -26,7 +26,7 @@ app.controller('graph', function ($scope, $http) {
                 $scope.resp = response;
                 console.log($scope.resp);
                 setTimeout(function(){google.charts.load('current', {'packages': ['corechart']});
-                },1000)
+                },1000);
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
@@ -43,6 +43,7 @@ app.controller('graph', function ($scope, $http) {
                     var chart = new google.visualization.ColumnChart(document.getElementById('div2'));
                     chart.draw(data, options);
                 }
+
                 google.charts.setOnLoadCallback(drawChart($scope.resp));
             });
     }
