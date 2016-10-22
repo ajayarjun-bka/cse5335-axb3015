@@ -1,0 +1,11 @@
+div(class="pull-left")
+    button(ng-click='click()',ng-hide="mydata.length") FETCH JSON
+    table(ng-show="mydata.length",border="1")
+        th firstName
+        th lastName
+        th age
+        tr(ng-repeat="person in mydata")
+            td {{person.firstName}}
+            td {{person.lastName}}
+            td {{person.age}}
+

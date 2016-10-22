@@ -1,12 +1,28 @@
 /**
  * Created by Ajay Arjun on 10/2/2016.
  */
-var app = angular.module('myApp', []);
-//google.charts.load('current', {'packages':['corechart']});
-//google.charts.setOnLoadCallback(drawChart);
+var app = angular.module('MyApp', ["ngRoute"]);
 
 google.charts.load('current', {'packages': ['corechart']});
-app.controller('myCtrl', function ($scope, $http) {
+
+app.config(function ($routeProvider) {
+    $routeProvider
+        .when('/table', {
+            templateUrl: '/views/partials/table.pug',
+            controller: 'table'
+        })
+        .when('/graph', {
+            templateUrl: '/views/partials/graph.pug',
+            controller: 'graph'
+        })
+        .when('/map', {
+            templateUrl: '/views/partials/map.pug',
+            controller: 'map'
+        })
+
+});
+
+app.controller('table', function ($scope, $http) {
     $scope.click = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/json")
             .success(function (response) {
@@ -17,7 +33,6 @@ app.controller('myCtrl', function ($scope, $http) {
             })
     }
 });
-
 
 app.controller('graph', function ($scope, $http) {
     $scope.drawer = function () {
@@ -45,7 +60,7 @@ app.controller('graph', function ($scope, $http) {
     }
 });
 
-app.controller('maps', function ($scope, $http) {
+app.controller('map', function ($scope, $http) {
     $scope.mapper = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/mapdata")
             .success(function (response) {
@@ -75,4 +90,11 @@ app.controller('maps', function ($scope, $http) {
 
     }
 
+});
+
+app.controller('header', function ($scope) {
+    $scope.appDetails = {
+        title: "PROJECT ONE",
+        tagline: "CSE 5335 Web Data Management"
+    };
 });

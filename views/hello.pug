@@ -1,37 +1,29 @@
 //
    Created by Ajay Arjun on 10/2/2016.
 doctype html
-html(ng-app='myApp')
+html(ng-app='MyApp')
     head
         title my jade template
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.js")
         script(src="https://www.gstatic.com/charts/loader.js")
-        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCix6eTqyWMd0mNZwoHcjfGpQcCiLiw9js')
-        style.
-            #div3 {
-                width: 100%;
-                height: 480px;
-            }
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCix6eTqyWMd0mNZwoHcjfGpQcCiLiw9js")
+        link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css")
+        script(src="/public/js/app.js")
+        link(rel="stylesheet", href="/public/css/app.css")
 
     body
-        h5 Hello #{name} Click the button below to load the json data from server
-        div( ng-controller='myCtrl')
-            button(ng-click='click()',ng-hide="mydata.length") FETCH JSON
-            table(ng-show="mydata.length",border="1")
-                th firstName
-                th lastName
-                th age
-                tr(ng-repeat="person in mydata")
-                    td {{person.firstName}}
-                    td {{person.lastName}}
-                    td {{person.age}}
-            h1(ng-show="!mydata.length") Click Button To Load Data
-        br
-        div(ng-controller='graph',id="div2")
-            button(ng-click='drawer()') click me for graph
-        div(ng-controller='maps',id="div3")
-            button(ng-click='mapper()') clcik me for map
-        script(src="/public/js/app.js")
 
-
+        #header-wrapper(ng-controller='header')
+            span.logo.pull-left {{appDetails.title}}
+            span.tagline.pull-left {{appDetails.tagline}}
+            .nav-wrapper.pull-left
+                ul.nav.nav-pills
+                    li.active
+                        a(href='#/table') Table
+                    li
+                        a(href='#/graph') Graph
+                    li
+                        a(href='#/map') Graph
+        div(ng-view)
