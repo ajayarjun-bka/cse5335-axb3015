@@ -24,7 +24,7 @@ app.controller('graph', function ($scope, $http) {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
-                alert($scope.resp);
+                console.log(resp);
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
@@ -53,6 +53,7 @@ app.controller('maps', function ($scope, $http) {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
+                alert($scope.resp);
                 function initMap(resp) {
                     var home = {lat: 32.733487, lng: -97.120123};
                     var map = new google.maps.Map(document.getElementById('div3'), {
