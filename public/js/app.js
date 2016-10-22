@@ -34,6 +34,7 @@ app.controller("table", function ($scope, $http) {
 });
 
 app.controller("graph", function ($scope, $http) {
+    $scope.drawer = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
@@ -55,9 +56,11 @@ app.controller("graph", function ($scope, $http) {
 
                 google.charts.setOnLoadCallback(drawChart($scope.resp));
             });
+    }
 });
 
 app.controller("map", function ($scope, $http) {
+    $scope.mapper = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/mapdata")
             .success(function (response) {
                 $scope.data = response;
@@ -81,6 +84,7 @@ app.controller("map", function ($scope, $http) {
 
                 initMap($scope.data)
             });
+    }
 
 });
 
