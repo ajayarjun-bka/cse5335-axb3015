@@ -24,13 +24,16 @@ app.config(function ($routeProvider) {
 });
 
 app.controller("table", function ($scope, $http) {
-    $http.get("https://cse5335-axb3015.herokuapp.com/json")
-        .success(function (response) {
-            $scope.mydata = response;
-        })
-        .error(function (response) {
-            console.log("Error" + response.status);
-        })
+    $scope.maketable = function () {
+        $http.get("https://cse5335-axb3015.herokuapp.com/json")
+            .success(function (response) {
+                $scope.mydata = response;
+            })
+            .error(function (response) {
+                console.log("Error" + response.status);
+            })
+    }
+
 });
 
 app.controller("graph", function ($scope, $http) {
