@@ -24,7 +24,7 @@ app.controller('graph', function ($scope, $http) {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
-                console.log($scope.resp);
+                alert($scope.resp);
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
