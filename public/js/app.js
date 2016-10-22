@@ -24,13 +24,11 @@ app.controller('graph', function ($scope, $http) {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
-                console.log(resp);
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
                     data.addColumn('number', 'Slices');
-                    console.log(data);
-                    for (r in data) {
+                    for (r in resp) {
                         data.addRow([resp[r].label, resp[r].count]);
                     }
                     var options = {
@@ -49,7 +47,6 @@ app.controller('graph', function ($scope, $http) {
 
 app.controller('maps', function ($scope, $http) {
     $scope.mapper = function () {
-        //$scope.resp = null;
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.data = response;
@@ -62,7 +59,7 @@ app.controller('maps', function ($scope, $http) {
                     console.log(data);
                     // var data = [{lat:32.738647, lng: -97.107513},{lat: 32.733487, lng: -97.120123},
                     //     {lat: 32.735095, lng: -97.114823}];
-                    for (i = 0; i < resp.length; i++) {
+                    for (i = 0; i < data.length; i++) {
                         console.log("for loop");
                         marker = new google.maps.Marker({
                             position: new google.maps.LatLng(data[i].lat, data[i].lng),
