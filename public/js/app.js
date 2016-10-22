@@ -29,8 +29,8 @@ app.controller('graph', function ($scope, $http) {
                     var data = new google.visualization.DataTable();
                     data.addColumn('string', 'Topping');
                     data.addColumn('number', 'Slices');
-                    console.log(resp);
-                    for (r in resp) {
+                    console.log(data);
+                    for (r in data) {
                         data.addRow([resp[r].label, resp[r].count]);
                     }
                     var options = {
