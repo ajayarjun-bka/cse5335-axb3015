@@ -1,28 +1,29 @@
 /**
  * Created by Ajay Arjun on 10/2/2016.
  */
-var app = angular.module('MyApp', ["ngRoute"]);
+var app = angular.module("MyApp", ["ngRoute"]);
 
-google.charts.load('current', {'packages': ['corechart']});
+google.charts.load("current", {"packages": ["corechart"]});
+
 
 app.config(function ($routeProvider) {
     $routeProvider
-        .when('/table', {
-            templateUrl: '/views/partials/table.pug',
-            controller: 'table'
+        .when("/table", {
+            templateUrl: "public/partials/table.pug",
+            controller: "table"
         })
-        .when('/graph', {
-            templateUrl: '/views/partials/graph.pug',
-            controller: 'graph'
+        .when("/graph", {
+            templateUrl: "public/partials/graph.pug",
+            controller: "graph"
         })
-        .when('/map', {
-            templateUrl: '/views/partials/map.pug',
-            controller: 'map'
+        .when("/map", {
+            templateUrl: "public/partials/map.pug",
+            controller: "map"
         })
 
 });
 
-app.controller('table', function ($scope, $http) {
+app.controller("table", function ($scope, $http) {
     $scope.click = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/json")
             .success(function (response) {
@@ -34,24 +35,24 @@ app.controller('table', function ($scope, $http) {
     }
 });
 
-app.controller('graph', function ($scope, $http) {
+app.controller("graph", function ($scope, $http) {
     $scope.drawer = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Topping');
-                    data.addColumn('number', 'Slices');
+                    data.addColumn("string", "Topping");
+                    data.addColumn("number", "Slices");
                     for (r in resp) {
                         data.addRow([resp[r].label, resp[r].count]);
                     }
                     var options = {
-                        'title': 'How Much Pizza I Ate Last Night',
-                        'width': 500,
-                        'height': 300
+                        "title": "How Much Pizza I Ate Last Night",
+                        "width": 500,
+                        "height": 300
                     };
-                    var chart = new google.visualization.ColumnChart(document.getElementById('div2'));
+                    var chart = new google.visualization.ColumnChart(document.getElementById("div2"));
                     chart.draw(data, options);
                 }
 
@@ -60,7 +61,7 @@ app.controller('graph', function ($scope, $http) {
     }
 });
 
-app.controller('map', function ($scope, $http) {
+app.controller("map", function ($scope, $http) {
     $scope.mapper = function () {
         $http.get("https://cse5335-axb3015.herokuapp.com/mapdata")
             .success(function (response) {
@@ -68,14 +69,12 @@ app.controller('map', function ($scope, $http) {
                 console.log($scope.data);
                 function initMap(data) {
                     var home = {lat: 32.733487, lng: -97.120123};
-                    var map = new google.maps.Map(document.getElementById('div3'), {
+                    var map = new google.maps.Map(document.getElementById("div3"), {
                         zoom: 15,
                         center: home
                     });
                     var marker
                     console.log(data);
-                    // var data = [{lat:32.738647, lng: -97.107513},{lat: 32.733487, lng: -97.120123},
-                    //     {lat: 32.735095, lng: -97.114823}];
                     for (i = 0; i < data.length; i++) {
                         console.log("for loop");
                         marker = new google.maps.Marker({
@@ -87,12 +86,11 @@ app.controller('map', function ($scope, $http) {
 
                 initMap($scope.data)
             });
-
     }
 
 });
 
-app.controller('header', function ($scope) {
+app.controller("header", function ($scope) {
     $scope.appDetails = {
         title: "PROJECT ONE",
         tagline: "CSE 5335 Web Data Management"
