@@ -53,14 +53,14 @@ app.controller('maps', function ($scope, $http) {
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
                 $scope.resp = response;
-                alert($scope.resp);
+
                 function initMap(resp) {
                     var home = {lat: 32.733487, lng: -97.120123};
                     var map = new google.maps.Map(document.getElementById('div3'), {
                         zoom: 15,
                         center: home
                     });
-
+                    alert(resp);
                     // var data = [{lat:32.738647, lng: -97.107513},{lat: 32.733487, lng: -97.120123},
                     //     {lat: 32.735095, lng: -97.114823}];
                     for (i = 0; i < resp.length; i++) {
