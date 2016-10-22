@@ -54,7 +54,7 @@ app.controller('maps', function ($scope, $http) {
          .success(function (response) {
          $scope.resp = response;
          });
-        function initMap() {
+        function initMap(resp) {
             var home = {lat: 32.733487, lng: -97.120123};
             var map = new google.maps.Map(document.getElementById('div3'), {
                 zoom: 15,
