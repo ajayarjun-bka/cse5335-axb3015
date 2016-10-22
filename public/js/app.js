@@ -49,7 +49,7 @@ app.controller('graph', function ($scope, $http) {
 
 app.controller('maps', function ($scope, $http) {
     $scope.mapper = function () {
-        $scope.resp = null;
+        //$scope.resp = null;
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
          .success(function (response) {
          $scope.resp = response;
@@ -71,7 +71,7 @@ app.controller('maps', function ($scope, $http) {
             }
         }
 
-        initMap(resp)
+        initMap($scope.resp)
     }
 
 });
