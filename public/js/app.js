@@ -52,27 +52,26 @@ app.controller('maps', function ($scope, $http) {
         //$scope.resp = null;
         $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
             .success(function (response) {
-                $scope.resp = response;
-
-                function initMap(resp) {
+                $scope.data = response;
+                function initMap(data) {
                     var home = {lat: 32.733487, lng: -97.120123};
                     var map = new google.maps.Map(document.getElementById('div3'), {
                         zoom: 15,
                         center: home
                     });
-                    console.log(resp);
+                    console.log(data);
                     // var data = [{lat:32.738647, lng: -97.107513},{lat: 32.733487, lng: -97.120123},
                     //     {lat: 32.735095, lng: -97.114823}];
                     for (i = 0; i < resp.length; i++) {
                         console.log("for loop");
                         marker = new google.maps.Marker({
-                            position: new google.maps.LatLng(resp[i].lat, resp[i].lng),
+                            position: new google.maps.LatLng(data[i].lat, data[i].lng),
                             map: map
                         })
                     }
                 }
 
-                initMap($scope.resp)
+                initMap($scope.data)
             });
 
     }
