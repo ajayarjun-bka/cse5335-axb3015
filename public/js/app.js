@@ -60,10 +60,11 @@ app.controller('maps', function ($scope, $http) {
                         zoom: 15,
                         center: home
                     });
-                    alert(resp);
+                    console.log(resp);
                     // var data = [{lat:32.738647, lng: -97.107513},{lat: 32.733487, lng: -97.120123},
                     //     {lat: 32.735095, lng: -97.114823}];
                     for (i = 0; i < resp.length; i++) {
+                        console.log("for loop");
                         marker = new google.maps.Marker({
                             position: new google.maps.LatLng(resp[i].lat, resp[i].lng),
                             map: map
