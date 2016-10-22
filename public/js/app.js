@@ -47,7 +47,7 @@ app.controller('graph', function ($scope, $http) {
 
 app.controller('maps', function ($scope, $http) {
     $scope.mapper = function () {
-        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
+        $http.get("https://cse5335-axb3015.herokuapp.com/mapdata")
             .success(function (response) {
                 $scope.data = response;
                 console.log($scope.data);
