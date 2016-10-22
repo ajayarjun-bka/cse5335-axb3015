@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e78dfc-703e-4efe-9e66-dac3bfdefddf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/table.pug" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/partials/table.pug" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/api.pug" afterPath="$PROJECT_DIR$/routes/api.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/hello.pug" afterPath="$PROJECT_DIR$/routes/hello.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/partials/graph.pug" afterPath="$PROJECT_DIR$/public/partials/graph.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/partials/map.pug" afterPath="$PROJECT_DIR$/public/partials/map.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/graph.pug" afterPath="$PROJECT_DIR$/public/partials/graph.pug" />
     </list>
     <ignored path="project1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -407,21 +400,7 @@
       <workItem from="1477103585060" duration="3420000" />
       <workItem from="1477115043139" duration="150000" />
       <workItem from="1477118139262" duration="13070000" />
-      <workItem from="1477163404639" duration="1758000" />
-    </task>
-    <task id="LOCAL-00057" summary="wrapping my head around angular">
-      <created>1476496396670</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1476496396670</updated>
-    </task>
-    <task id="LOCAL-00058" summary="wrapping my head around angular">
-      <created>1476496605850</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1476496605850</updated>
+      <workItem from="1477163404639" duration="3127000" />
     </task>
     <task id="LOCAL-00059" summary="wrapping my head around angular">
       <created>1476496759185</created>
@@ -752,11 +731,25 @@
       <option name="project" value="LOCAL" />
       <updated>1477156590612</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="wrapping my head around angular`">
+      <created>1477165285215</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1477165285215</updated>
+    </task>
+    <task id="LOCAL-00107" summary="wrapping my head around angular`">
+      <created>1477165414576</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1477165414576</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109730000" />
+    <option name="totallyTimeSpent" value="111099000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
