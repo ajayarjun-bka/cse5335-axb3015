@@ -49,34 +49,29 @@ app.controller('graph', function ($scope, $http) {
 
 app.controller('maps', function ($scope, $http) {
     $scope.mapper = function () {
-        /*$http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
+        $scope.resp = null;
+        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
          .success(function (response) {
          $scope.resp = response;
-         });*/
+         });
         function initMap() {
             var home = {lat: 32.733487, lng: -97.120123};
-            var kfc = {lat: 32.735095, lng: -97.114823};
-            var mcd = {lat: 32.735966, long: -97.113788};
             var map = new google.maps.Map(document.getElementById('div3'), {
                 zoom: 15,
                 center: home
             });
-            // var marker = new google.maps.Marker({
-            //     position: home,
-            //     map: map
-            // });
 
-            var data = [{lat: 32.733487, lng: -97.120123}, {lat: 32.735095, lng: -97.114823}, {lat: 32.735966,long: -97.113788},
-                {lat: 72.735095, lng: -97.114823}];
-            for (i = 0; i < data.length; i++) {
+            // var data = [{lat:32.738647, lng: -97.107513},{lat: 32.733487, lng: -97.120123},
+            //     {lat: 32.735095, lng: -97.114823}];
+            for (i = 0; i < resp.length; i++) {
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(data[i].lat, data[i].lng),
+                    position: new google.maps.LatLng(resp[i].lat, resp[i].lng),
                     map: map
                 })
             }
         }
 
-        initMap()
+        initMap(resp)
     }
 
 });
