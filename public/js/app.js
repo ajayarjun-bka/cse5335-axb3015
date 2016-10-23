@@ -31,7 +31,7 @@ app.config(function ($routeProvider) {
 
 app.controller("table", function ($scope, $http) {
     $scope.maketable = function () {
-        $http.get("https://cse5335-axb3015.herokuapp.com/json")
+        $http.get("https://cse5335-axb3015.herokuapp.com/table-data")
             .success(function (response) {
                 $scope.mydata = response;
             })
@@ -44,7 +44,7 @@ app.controller("table", function ($scope, $http) {
 
 app.controller("graph", function ($scope, $http) {
     $scope.drawer = function () {
-        $http.get("https://cse5335-axb3015.herokuapp.com/graphdata")
+        $http.get("https://cse5335-axb3015.herokuapp.com/graph-data")
             .success(function (response) {
                 $scope.resp = response;
                 function drawChart(resp) {
@@ -70,7 +70,7 @@ app.controller("graph", function ($scope, $http) {
 
 app.controller("map", function ($scope, $http) {
     $scope.mapper = function () {
-        $http.get("https://cse5335-axb3015.herokuapp.com/mapdata")
+        $http.get("https://cse5335-axb3015.herokuapp.com/map-data")
             .success(function (response) {
                 $scope.data = response;
                 console.log($scope.data);

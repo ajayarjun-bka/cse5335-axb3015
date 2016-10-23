@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 
 
 
-app.get('/json', function (req, res) {
+app.get('/table-data', function (req, res) {
     var obj;
     fs.readFile('sample.json', 'utf8', function (err, data) {
         if (err) throw err;
@@ -34,13 +34,13 @@ app.get('/json', function (req, res) {
     });
 });
 
-app.get('/graphdata', function (req, res) {
+app.get('/graph-data', function (req, res) {
     var data = '[{"label":"toyota","count":45},{"label":"HONDA","count":60},{"label":"NISSAN","count":30},{"label":"GM","count":50}]';
     var rows = JSON.parse(data);
     res.json(rows);
 });
 
-app.get('/mapdata', function (req, res) {
+app.get('/map-data', function (req, res) {
     var data = [{lat: 32.738647, lng: -97.107513}, {lat: 32.733487, lng: -97.120123},
         {lat: 32.735095, lng: -97.114823}];
     res.json(data);
