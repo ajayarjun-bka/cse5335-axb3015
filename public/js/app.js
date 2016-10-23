@@ -56,7 +56,7 @@ app.controller("graph", function ($scope, $http) {
                     }
                     var options = {
                         "title": "DATA FROM JSON",
-                        "width": 500,
+                        "width": 600,
                         "height": 300
                     };
                     var chart = new google.visualization.ColumnChart(document.getElementById("div"));
