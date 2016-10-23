@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e78dfc-703e-4efe-9e66-dac3bfdefddf" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/api.pug" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/partials/graph.pug" afterPath="$PROJECT_DIR$/public/partials/graph.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/partials/map.pug" afterPath="$PROJECT_DIR$/public/partials/map.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/partials/table.pug" afterPath="$PROJECT_DIR$/public/partials/table.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/hello.pug" afterPath="$PROJECT_DIR$/routes/hello.pug" />
     </list>
     <ignored path="project1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,15 +34,15 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="500">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partials/map.pug">
+      <file leaf-file-name="map.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partials/map.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
               <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
@@ -46,18 +51,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hello.pug" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hello.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/hello.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="693">
+              <caret line="33" column="112" selection-start-line="33" selection-start-column="112" selection-end-line="33" selection-end-column="112" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partials/graph.pug">
+      <file leaf-file-name="graph.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partials/graph.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
               <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
@@ -66,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+            <state relative-caret-position="1100">
+              <caret line="46" column="60" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="60" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -78,8 +83,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partials/table.pug">
+      <file leaf-file-name="table.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partials/table.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
               <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="27" />
@@ -123,12 +128,12 @@
         <option value="$PROJECT_DIR$/views/partials/aa.html" />
         <option value="$PROJECT_DIR$/views/partials/table.pug" />
         <option value="$PROJECT_DIR$/views/hello.pug" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/routes/hello.pug" />
         <option value="$PROJECT_DIR$/public/partials/graph.pug" />
         <option value="$PROJECT_DIR$/public/partials/map.pug" />
         <option value="$PROJECT_DIR$/public/partials/table.pug" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/routes/hello.pug" />
       </list>
     </option>
   </component>
@@ -403,14 +408,7 @@
       <workItem from="1477115043139" duration="150000" />
       <workItem from="1477118139262" duration="13070000" />
       <workItem from="1477163404639" duration="4660000" />
-      <workItem from="1477186626403" duration="1339000" />
-    </task>
-    <task id="LOCAL-00066" summary="wrapping my head around angular">
-      <created>1476568370863</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1476568370863</updated>
+      <workItem from="1477186626403" duration="2721000" />
     </task>
     <task id="LOCAL-00067" summary="wrapping my head around angular">
       <created>1476568404146</created>
@@ -748,11 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477190919936</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="wrapping my head around angular`">
+      <created>1477191080149</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1477191080150</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113971000" />
+    <option name="totallyTimeSpent" value="115353000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1123,23 +1128,7 @@
     <entry file="file://$PROJECT_DIR$/graph.pug" />
     <entry file="file://$PROJECT_DIR$/a.html" />
     <entry file="file://$PROJECT_DIR$/views/partials/aa.html" />
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/hello.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/map.pug">
+    <entry file="file://$PROJECT_DIR$/public/partials/map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
@@ -1147,7 +1136,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/graph.pug">
+    <entry file="file://$PROJECT_DIR$/public/partials/graph.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
@@ -1155,7 +1144,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/table.pug">
+    <entry file="file://$PROJECT_DIR$/public/partials/table.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="27" />
@@ -1165,11 +1154,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+        <state relative-caret-position="1100">
+          <caret line="46" column="60" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="60" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/hello.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="112" selection-start-line="33" selection-start-column="112" selection-end-line="33" selection-end-column="112" />
+          <folding />
         </state>
       </provider>
     </entry>

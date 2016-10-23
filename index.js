@@ -18,14 +18,9 @@ app.use('/', function (req, res, next) {
 
 app.get('/', function (req, res) {
     res.render('hello');
-    //console.log(req.path);
 });
 
 
-app.get('/public/partials/:name',function (req,res) {
-    res.render('/public/partials/'+req.params.name);
-    //console.log(req.path);
-});
 
 app.get('/json', function (req, res) {
     var obj;
