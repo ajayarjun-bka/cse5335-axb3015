@@ -8,6 +8,9 @@ google.charts.load("current", {"packages": ["corechart"]});
 
 app.config(function ($routeProvider) {
     $routeProvider
+        .when("/",{
+            templateUrl: "public/partials/main.html"
+        })
         .when("/table", {
             templateUrl: "public/partials/table.html",
             controller: "table"
@@ -21,7 +24,7 @@ app.config(function ($routeProvider) {
             controller: "map"
         })
         .otherwise({
-            redirectTo: "/"
+            templateUrl: "public/partials/main.html"
         });
 
 });
@@ -56,7 +59,7 @@ app.controller("graph", function ($scope, $http) {
                         "width": 500,
                         "height": 300
                     };
-                    var chart = new google.visualization.ColumnChart(document.getElementById("div2"));
+                    var chart = new google.visualization.ColumnChart(document.getElementById("div"));
                     chart.draw(data, options);
                 }
 
@@ -73,7 +76,7 @@ app.controller("map", function ($scope, $http) {
                 console.log($scope.data);
                 function initMap(data) {
                     var home = {lat: 32.733487, lng: -97.120123};
-                    var map = new google.maps.Map(document.getElementById("div3"), {
+                    var map = new google.maps.Map(document.getElementById("map-div"), {
                         zoom: 15,
                         center: home
                     });

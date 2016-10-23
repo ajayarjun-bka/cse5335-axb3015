@@ -16,7 +16,7 @@ html(ng-app='MyApp')
     body
 
         #header-wrapper(ng-controller='header')
-            a(href="/")
+            a(href="#/")
                 span.logo.pull-left {{appDetails.title}}
             span.tagline.pull-left {{appDetails.tagline}}
             .nav-wrapper.pull-left
@@ -32,10 +32,3 @@ html(ng-app='MyApp')
         br
         br
         div(ng-view)
-        br
-        br
-        br
-        br
-        div(class="body-font")
-            p click on the links on the navigation bar for different sections.This is a single page Angular App
-            p All data are fetched through ajax calls
