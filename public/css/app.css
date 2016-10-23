@@ -21,11 +21,12 @@
     margin-top: 15px;
 }
 
-#div3 {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 100%;
-    height: 480px;
+#injected-div {
+    margin: 0 auto;
+    width: 200px;
+    background: black;
+    padding: 20px;
+    color: white;
 }
 
 .body-font{
