@@ -16,7 +16,8 @@ html(ng-app='MyApp')
     body
 
         #header-wrapper(ng-controller='header')
-            span.logo.pull-left {{appDetails.title}}
+            a(href="/")
+                span.logo.pull-left {{appDetails.title}}
             span.tagline.pull-left {{appDetails.tagline}}
             .nav-wrapper.pull-left
                 ul.nav.nav-pills
