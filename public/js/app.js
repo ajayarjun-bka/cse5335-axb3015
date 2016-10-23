@@ -43,8 +43,8 @@ app.controller("graph", function ($scope, $http) {
                 $scope.resp = response;
                 function drawChart(resp) {
                     var data = new google.visualization.DataTable();
-                    data.addColumn("string", "Topping");
-                    data.addColumn("number", "Slices");
+                    data.addColumn("string", "Manufacturer");
+                    data.addColumn("number", "Number of Cars");
                     for (r in resp) {
                         data.addRow([resp[r].label, resp[r].count]);
                     }
