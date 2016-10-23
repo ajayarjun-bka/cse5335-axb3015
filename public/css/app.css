@@ -28,6 +28,11 @@
     height: 480px;
 }
 
+#div1{
+    display: block;
+    margin-left: 30px;
+}
+
 .body-font{
     font-size: 10px;
     font-family: monospace;
