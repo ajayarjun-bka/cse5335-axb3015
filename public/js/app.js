@@ -9,17 +9,20 @@ google.charts.load("current", {"packages": ["corechart"]});
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/table", {
-            templateUrl: "public/partials/table.pug",
+            templateUrl: "public/partials/table.html",
             controller: "table"
         })
         .when("/graph", {
-            templateUrl: "public/partials/graph.pug",
+            templateUrl: "public/partials/graph.html",
             controller: "graph"
         })
         .when("/map", {
-            templateUrl: "public/partials/map.pug",
+            templateUrl: "public/partials/map.html",
             controller: "map"
         })
+        .otherwise({
+            redirectTo: "/"
+        });
 
 });
 
