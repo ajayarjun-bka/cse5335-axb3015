@@ -24,13 +24,12 @@
 #map-div {
     margin-left: 20px;
     margin-right: 20px;
-    height: 480px;
     display: block;
 }
 
 #div {
     display: block;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 30px;
 }
 

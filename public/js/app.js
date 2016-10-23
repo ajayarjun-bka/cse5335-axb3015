@@ -76,6 +76,7 @@ app.controller("map", function ($scope, $http) {
                 console.log($scope.data);
                 function initMap(data) {
                     var home = {lat: 32.733487, lng: -97.120123};
+                    $("#map-div").css("height","480px");
                     var map = new google.maps.Map(document.getElementById("map-div"), {
                         zoom: 15,
                         center: home
