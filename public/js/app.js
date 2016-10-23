@@ -49,7 +49,7 @@ app.controller("graph", function ($scope, $http) {
                         data.addRow([resp[r].label, resp[r].count]);
                     }
                     var options = {
-                        "title": "How Much Pizza I Ate Last Night",
+                        "title": "DATA FROM JSON",
                         "width": 500,
                         "height": 300
                     };
