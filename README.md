@@ -1,6 +1,3 @@
-#DESCRIBE YOUR PROJECT HERE
-
-
 ###What server framework did you choose and why?
 I have chosen Node.jS as server side framework.
 
@@ -32,6 +29,4 @@ Understanding the concept of using middle-ware in express framework was kind of 
 Express framework was installed to simplify the implementation of web server ,pug template engine to replace html markup. It reduced the html code and introduced more readability and organization to the  coed structure
 
 ###What Ubuntu commands are required to deploy and run your server?
-logs
-
-
+I did not directly use any Ubuntu commands explicitly. I encountered commands like npm install --express, git related commands.
