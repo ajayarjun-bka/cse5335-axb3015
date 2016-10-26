@@ -1,0 +1,14 @@
+//
+   Created by Ajay Arjun on 10/2/2016.
+#div
+    button.button-style(ng-click='maketable()', ng-hide='mydata.length') Click For Table
+    table.table(ng-show='mydata.length')
+        th firstName
+        th lastName
+        th age
+        tr(ng-repeat='person in mydata')
+            td {{person.firstName}}
+            td {{person.lastName}}
+            td {{person.age}}
+#main-div
+    p Click On Project One logo for HomePage

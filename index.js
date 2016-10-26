@@ -3,13 +3,11 @@ var pug = require('pug');
 var path = require('path');
 var fs = require('fs');
 var port = process.env.PORT || 5000;
-var favicon = require('express-favicon');
 var app = express();
 
 
-
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, '/routes'));
+app.set('views', path.join(__dirname, '/views'));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
@@ -23,6 +21,10 @@ app.get('/', function (req, res) {
 });
 
 
+app.get('/partials/:name', function (req, res) {
+    var name = req.params.name;
+    res.render('partials/' + name);
+});
 
 app.get('/table-data', function (req, res) {
     var obj;
