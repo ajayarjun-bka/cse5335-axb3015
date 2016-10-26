@@ -29,7 +29,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="-585">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
@@ -381,14 +381,7 @@
       <workItem from="1477280116030" duration="629000" />
       <workItem from="1477428496098" duration="4189000" />
       <workItem from="1477434010888" duration="99000" />
-      <workItem from="1477434454100" duration="1380000" />
-    </task>
-    <task id="LOCAL-00090" summary="wrapping my head around angular">
-      <created>1477093813466</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1477093813466</updated>
+      <workItem from="1477434454100" duration="1647000" />
     </task>
     <task id="LOCAL-00091" summary="wrapping my head around angular">
       <created>1477096501258</created>
@@ -726,11 +719,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477434494800</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary=" Readme addition">
+      <created>1477443464156</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1477443464156</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132850000" />
+    <option name="totallyTimeSpent" value="133117000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -823,7 +823,8 @@
     <MESSAGE value="wrapping my head around angular`" />
     <MESSAGE value="Final Changes" />
     <MESSAGE value="Final Changes`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Changes`" />
+    <MESSAGE value=" Readme addition" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Readme addition" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1081,7 +1082,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="-585">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
