@@ -1,9 +1,42 @@
 var express = require('express');
 var pug = require('pug');
+var mongodb = require('mongodb');
 var path = require('path');
 var fs = require('fs');
 var port = process.env.PORT || 5000;
 var app = express();
+var mongoose = require('mongoose');
+var mongodbUri = 'mongodb://heroku_zf2ln3fx:batrgh1r3emubhs6unnirlmvbl@ds163397.mlab.com:63397/heroku_zf2ln3fx';
+mongoose.connect(mongodbUri);
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+
+var Schema = mongoose.Schema;
+var UserSchema = new Schema({
+    _id: Number,
+    name : String,
+    scores : [
+        {
+            "score" : Number,
+            "type" : String
+        },
+        {
+            "score" : Number,
+            "type" : String
+        },
+        {
+            "score" : Number,
+            "type" : String
+        }
+    ]
+});
+var User = mongoose.model('User', UserSchema);
+
+
+
+
+
 
 
 app.set('view engine', 'pug');
@@ -35,6 +68,11 @@ app.get('/table-data', function (req, res) {
     });
 });
 
+app.get('/users/:id', function (req, res) {
+    User.find({_id:req.params.id}, function (err, docs) {
+        res.json(docs);
+    })
+});
 app.get('/graph-data', function (req, res) {
     var data = '[{"label":"toyota","count":45},{"label":"HONDA","count":60},{"label":"NISSAN","count":30},{"label":"GM","count":50}]';
     var rows = JSON.parse(data);

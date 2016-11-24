@@ -23,6 +23,10 @@ app.config(function ($routeProvider) {
             templateUrl: "partials/map",
             controller: "map"
         })
+        .when("/second", {
+            templateUrl: "partials/second",
+            controller: "ajax"
+        })
         .otherwise({
             templateUrl: "public/partials/main.html"
         });
@@ -103,4 +107,18 @@ app.controller("header", function ($scope) {
         title: "PROJECT ONE",
         tagline: "CSE 5335 Web Data Management"
     };
+});
+
+app.controller("ajax", function ($scope,$http) {
+    $scope.appDetails = function () {
+        var items=[];
+        var id=4;
+        $http.get("https://localhost/users/"+id)
+            .success(function (response) {
+                items.push(response);
+                console.log(response);
+            })
+
+
+    }
 });
