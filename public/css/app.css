@@ -60,8 +60,8 @@
 
 
 .ng-enter {
-    -webkit-transition: 1s;
-    transition: 1s;
+    -webkit-transition: 2s;
+    transition: 2s;
 
     margin-left: 100%;
 }
@@ -71,8 +71,8 @@
 }
 
 .ng-leave {
-    -webkit-transition: 1s;
-    transition: 1s;
+    -webkit-transition: 2s;
+    transition: 2s;
 
     margin-left: 0;
 }
@@ -96,7 +96,11 @@
     -webkit-transition: none !important;
     transition: none !important;
 }
-#secon
+#list
 {
     list-style-type: none;
+}
+.ng-hide-add.ng-hide-add-active {
+    position: absolute;
+    bottom: 0;
 }
