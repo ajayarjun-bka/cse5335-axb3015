@@ -104,3 +104,7 @@
     position: absolute;
     bottom: 0;
 }
+
+body {
+    overflow:hidden;
+}
