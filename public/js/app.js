@@ -1,14 +1,14 @@
 /**
  * Created by Ajay Arjun on 10/2/2016.
  */
-var app = angular.module("MyApp", ["ngRoute"]);
+var app = angular.module('MyApp', ['ngRoute','ngAnimate']);
 
 google.charts.load("current", {"packages": ["corechart"]});
 
 
 app.config(function ($routeProvider) {
     $routeProvider
-        .when("/",{
+        .when("/", {
             templateUrl: "partials/main"
         })
         .when("/table", {
@@ -23,8 +23,8 @@ app.config(function ($routeProvider) {
             templateUrl: "partials/map",
             controller: "map"
         })
-        .when("/second", {
-            templateUrl: "partials/second",
+        .when("/list", {
+            templateUrl: "partials/list",
             controller: "ajax"
         })
         .otherwise({
@@ -80,7 +80,7 @@ app.controller("map", function ($scope, $http) {
                 console.log($scope.data);
                 function initMap(data) {
                     var home = {lat: 32.733487, lng: -97.120123};
-                    $("#map-div").css("height","480px");
+                    $("#map-div").css("height", "480px");
                     var map = new google.maps.Map(document.getElementById("map-div"), {
                         zoom: 15,
                         center: home
@@ -109,16 +109,26 @@ app.controller("header", function ($scope) {
     };
 });
 
-app.controller("ajax", function ($scope,$http) {
-    $scope.appDetails = function () {
-        var items=[];
-        var id=4;
-        $http.get("https://localhost/users/"+id)
+
+
+app.controller("ajax", function ($scope, $http,$interval) {
+    $scope.id=0;
+    $scope.items=[];
+    function api() {
+        $http.get("http://localhost:5000/users/" + $scope.id)
             .success(function (response) {
-                items.push(response);
                 console.log(response);
+                $scope.id++;
+                for(var i=0;i<response.length;i++)
+                {
+                    if($scope.items.length>15)
+                        $scope.items.shift();
+                    $scope.items.push(response.pop());
+                }
             })
-
-
-    }
+            .error(function (response) {
+                console.log("Error" + response.status);
+            });
+    };
+    $interval(api,500,100);
 });

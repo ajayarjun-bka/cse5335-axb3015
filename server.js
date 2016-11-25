@@ -70,6 +70,7 @@ app.get('/table-data', function (req, res) {
 
 app.get('/users/:id', function (req, res) {
     User.find({_id:req.params.id}, function (err, docs) {
+        //console.log(docs)
         res.json(docs);
     })
 });
