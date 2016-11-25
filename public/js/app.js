@@ -115,7 +115,7 @@ app.controller("ajax", function ($scope, $http,$interval) {
     $scope.id=0;
     $scope.items=[];
     function api() {
-        $http.get("http://localhost:5000/users/" + $scope.id)
+        $http.get("https://cse5335-axb3015.herokuapp.com/users/" + $scope.id)
             .success(function (response) {
                 console.log(response);
                 $scope.id++;
