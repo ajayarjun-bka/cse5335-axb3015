@@ -60,9 +60,8 @@
 
 
 .ng-enter {
-    -webkit-transition: 2s;
-    transition: 2s;
-
+    -webkit-transition: 1s;
+    transition: 1s;
     margin-left: 100%;
 }
 
@@ -70,12 +69,12 @@
     margin-left: 0;
 }
 
-.ng-leave {
-    -webkit-transition: 2s;
-    transition: 2s;
+/*.ng-leave {*/
+    /*-webkit-transition: 2s;*/
+    /*transition: 2s;*/
 
-    margin-left: 0;
-}
+    /*margin-left: 0;*/
+/*}*/
 
 .ng-leave-active {
     margin-left: 100%;

@@ -121,7 +121,7 @@ app.controller("ajax", function ($scope, $http,$interval) {
                 $scope.id++;
                 for(var i=0;i<response.length;i++)
                 {
-                    if($scope.items.length>15)
+                    if($scope.items.length>20)
                         $scope.items.shift();
                     $scope.items.push(response.pop());
                 }
