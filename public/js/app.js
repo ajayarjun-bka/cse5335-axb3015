@@ -130,5 +130,5 @@ app.controller("ajax", function ($scope, $http,$interval) {
                 console.log("Error" + response.status);
             });
     };
-    $interval(api,500,120);
+    $interval(api,500,111);
 });
