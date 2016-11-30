@@ -9,7 +9,7 @@ google.charts.load("current", {"packages": ["corechart"]});
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "partials/list"
+            templateUrl: "partials/main"
         })
         .when("/table", {
             templateUrl: "partials/table",
