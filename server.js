@@ -13,25 +13,24 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 var Schema = mongoose.Schema;
+
 var UserSchema = new Schema({
     _id: Number,
-    name : String,
-    scores : [
-        {
-            "score" : Number,
-            "type" : String
-        },
-        {
-            "score" : Number,
-            "type" : String
-        },
-        {
-            "score" : Number,
-            "type" : String
-        }
-    ]
+    name : String
 });
+
 var User = mongoose.model('User', UserSchema);
+
+var customers = new Schema({
+    pk: Number,
+    AGE: Number,
+    SEX: Number,
+    PROVIDER: Number,
+    STAY: Number,
+    PRICE: Number
+});
+
+var User = mongoose.model('Customer', customers);
 
 
 
@@ -69,7 +68,7 @@ app.get('/table-data', function (req, res) {
 });
 
 app.get('/users/:id', function (req, res) {
-    User.find({_id:req.params.id}, function (err, docs) {
+    User.find({pk:req.params.id}, function (err, docs) {
         //console.log(docs)
         res.json(docs);
     })
