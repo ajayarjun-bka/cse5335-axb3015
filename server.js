@@ -14,12 +14,12 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 var Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
-    _id: Number,
-    name : String
-});
-
-var User = mongoose.model('User', UserSchema);
+// var UserSchema = new Schema({
+//     _id: Number,
+//     name : String
+// });
+//
+// var User = mongoose.model('User', UserSchema);
 
 var customers = new Schema({
     pk: Number,

@@ -112,7 +112,7 @@ app.controller("header", function ($scope) {
 
 
 app.controller("ajax", function ($scope, $http,$interval) {
-    $scope.id=0;
+    $scope.id=1;
     $scope.items=[];
     function api() {
         $http.get("https://cse5335-axb3015.herokuapp.com/users/" + $scope.id)
