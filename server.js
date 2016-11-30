@@ -26,8 +26,8 @@ var customers = new Schema({
     AGE: Number,
     SEX: Number,
     NATIONAL_PROVIDER_ID: Number,
-    STAY: Number,
-    PRICE: Number
+    LENGTH_OF_STAY: Number,
+    DRG_PRICE: Number
 });
 
 var Customer = mongoose.model('Customer', customers);
