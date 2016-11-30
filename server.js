@@ -25,7 +25,7 @@ var customers = new Schema({
     pk: Number,
     AGE: Number,
     SEX: Number,
-    PROVIDER: Number,
+    NATIONAL_PROVIDER_ID: Number,
     STAY: Number,
     PRICE: Number
 });
