@@ -30,7 +30,7 @@ var customers = new Schema({
     PRICE: Number
 });
 
-var User = mongoose.model('Customer', customers);
+var Customer = mongoose.model('Customer', customers);
 
 
 
@@ -68,7 +68,7 @@ app.get('/table-data', function (req, res) {
 });
 
 app.get('/users/:id', function (req, res) {
-    User.find({pk:req.params.id}, function (err, docs) {
+    Customer.find({pk:req.params.id}, function (err, docs) {
         //console.log(docs)
         res.json(docs);
     })
