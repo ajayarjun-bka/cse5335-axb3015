@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62e78dfc-703e-4efe-9e66-dac3bfdefddf" name="Default" comment="second start">
+    <list default="true" id="62e78dfc-703e-4efe-9e66-dac3bfdefddf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.pug" afterPath="$PROJECT_DIR$/views/index.pug" />
     </list>
     <ignored path="project1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,7 +90,7 @@
       <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="528">
               <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding />
             </state>
@@ -524,14 +523,7 @@
       <workItem from="1481061144674" duration="81000" />
       <workItem from="1483355470945" duration="1584000" />
       <workItem from="1484848612675" duration="63000" />
-      <workItem from="1485862581405" duration="38000" />
-    </task>
-    <task id="LOCAL-00109" summary="wrapping my head around angular`">
-      <created>1477167685620</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1477167685620</updated>
+      <workItem from="1485862581405" duration="64000" />
     </task>
     <task id="LOCAL-00110" summary="wrapping my head around angular`">
       <created>1477168000054</created>
@@ -869,11 +861,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480479010368</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="second start">
+      <created>1485862628092</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1485862628093</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187545000" />
+    <option name="totallyTimeSpent" value="187571000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1184,7 +1183,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="528">
           <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding />
         </state>
